@@ -1,4 +1,4 @@
-const STORAGE_KEY = "cc1_notifications";
+const STORAGE_KEY = 'cc1_notifications';
 
 export interface NotificationItem {
   id: string;
@@ -10,10 +10,34 @@ export interface NotificationItem {
 
 function defaultNotifications(): NotificationItem[] {
   return [
-    { id: "1", title: "New Order", message: "Order #ORD-2119 placed by Aarav Mehta", time: "10 min ago", read: false },
-    { id: "2", title: "Shift Alert", message: "Shweta Tiwari is 2 hrs late", time: "1 hr ago", read: false },
-    { id: "3", title: "Low Stock", message: "Coffee beans running low", time: "3 hrs ago", read: true },
-    { id: "4", title: "New Request", message: "Raised request from landing page", time: "5 hrs ago", read: true },
+    {
+      id: '1',
+      title: 'New Order',
+      message: 'Order #ORD-2119 placed by Aarav Mehta',
+      time: '10 min ago',
+      read: false,
+    },
+    {
+      id: '2',
+      title: 'Shift Alert',
+      message: 'Shweta Tiwari is 2 hrs late',
+      time: '1 hr ago',
+      read: false,
+    },
+    {
+      id: '3',
+      title: 'Low Stock',
+      message: 'Coffee beans running low',
+      time: '3 hrs ago',
+      read: true,
+    },
+    {
+      id: '4',
+      title: 'New Request',
+      message: 'Raised request from landing page',
+      time: '5 hrs ago',
+      read: true,
+    },
   ];
 }
 
@@ -36,10 +60,10 @@ export function clearAllNotifications() {
 }
 
 export function markAllRead() {
-  const items = getNotifications().map((n) => ({ ...n, read: true }));
+  const items = getNotifications().map(n => ({ ...n, read: true }));
   saveNotifications(items);
 }
 
 export function unreadCount(): number {
-  return getNotifications().filter((n) => !n.read).length;
+  return getNotifications().filter(n => !n.read).length;
 }

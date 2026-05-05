@@ -4,13 +4,16 @@ type AvatarData = {
 };
 
 export function stringAvatar(name: string): AvatarData {
-  const parts = name.trim().split(" ").filter(Boolean);
-  const initials = parts.slice(0, 2).map((chunk) => chunk[0]?.toUpperCase() ?? "").join("");
+  const parts = name.trim().split(' ').filter(Boolean);
+  const initials = parts
+    .slice(0, 2)
+    .map(chunk => chunk[0]?.toUpperCase() ?? '')
+    .join('');
 
   return {
     sx: {
-      bgcolor: "#00A391",
+      bgcolor: '#00A391',
     },
-    children: initials || "?",
+    children: initials || '?',
   };
 }

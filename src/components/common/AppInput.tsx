@@ -1,39 +1,39 @@
-import { TextField, TextFieldProps, InputAdornment } from "@mui/material";
-import type React from "react";
+import { TextField, TextFieldProps, InputAdornment } from '@mui/material';
+import type React from 'react';
 
 export type AppInputProps = TextFieldProps & {
   icon?: React.ReactNode;
-  iconPosition?: "start" | "end";
+  iconPosition?: 'start' | 'end';
   dark?: boolean;
 };
 
 const darkInputStyles = {
-  bgcolor: "#171b30",
+  bgcolor: '#171b30',
   borderRadius: 1.2,
-  color: "#f6f8ff",
+  color: '#f6f8ff',
   height: 42,
-  "& fieldset": { border: "none" },
+  '& fieldset': { border: 'none' },
 };
 
 const lightInputStyles = {
-  bgcolor: "background.paper",
+  bgcolor: 'background.paper',
   borderRadius: 2,
-  color: "text.secondary",
+  color: 'text.secondary',
   height: 40,
-  "& fieldset": {
-    borderColor: "rgba(255,255,255,0.06)",
+  '& fieldset': {
+    borderColor: 'rgba(255,255,255,0.06)',
   },
-  "&:hover fieldset": {
-    borderColor: "rgba(255,255,255,0.12)",
+  '&:hover fieldset': {
+    borderColor: 'rgba(255,255,255,0.12)',
   },
-  "&.Mui-focused fieldset": {
-    borderColor: "primary.main",
+  '&.Mui-focused fieldset': {
+    borderColor: 'primary.main',
   },
 };
 
 export default function AppInput({
   icon,
-  iconPosition = "start",
+  iconPosition = 'start',
   dark = true,
   ...props
 }: AppInputProps) {
@@ -50,8 +50,8 @@ export default function AppInput({
       slotProps={{
         input: {
           sx: inputStyles,
-          startAdornment: iconPosition === "start" ? adornment : undefined,
-          endAdornment: iconPosition === "end" ? adornment : undefined,
+          startAdornment: iconPosition === 'start' ? adornment : undefined,
+          endAdornment: iconPosition === 'end' ? adornment : undefined,
         },
       }}
     />
@@ -77,32 +77,17 @@ export function SearchInput(props: AppInputProps) {
 }
 
 export function EmailInput(props: AppInputProps) {
-  return (
-    <DarkInput
-      type="email"
-      placeholder="Enter your email"
-      {...props}
-    />
-  );
+  return <DarkInput type="email" placeholder="Enter your email" {...props} />;
 }
 
 export function PasswordInput(props: AppInputProps) {
-  return (
-    <DarkInput
-      type="password"
-      placeholder="Enter your password"
-      {...props}
-    />
-  );
+  return <DarkInput type="password" placeholder="Enter your password" {...props} />;
 }
 
-export function LabelledInput({
-  label,
-  ...props
-}: AppInputProps & { label: string }) {
+export function LabelledInput({ label, ...props }: AppInputProps & { label: string }) {
   return (
     <div>
-      <label style={{ color: "#d9dfef", fontSize: 13, display: "block", marginBottom: 6 }}>
+      <label style={{ color: '#d9dfef', fontSize: 13, display: 'block', marginBottom: 6 }}>
         {label}
       </label>
       <DarkInput {...props} />
@@ -110,15 +95,10 @@ export function LabelledInput({
   );
 }
 
-export function LabelledLightInput({
-  label,
-  ...props
-}: AppInputProps & { label: string }) {
+export function LabelledLightInput({ label, ...props }: AppInputProps & { label: string }) {
   return (
     <div>
-      <label style={{ display: "block", marginBottom: 6 }}>
-        {label}
-      </label>
+      <label style={{ display: 'block', marginBottom: 6 }}>{label}</label>
       <LightInput {...props} />
     </div>
   );

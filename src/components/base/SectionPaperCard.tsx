@@ -1,6 +1,6 @@
-import { Paper } from "@mui/material";
-import type { ReactNode, MouseEvent } from "react";
-import type { SxProps, Theme } from "@mui/material/styles";
+import { Paper } from '@mui/material';
+import type { ReactNode, MouseEvent } from 'react';
+import type { SxProps, Theme } from '@mui/material/styles';
 
 type Props = {
   children: ReactNode;
@@ -15,9 +15,9 @@ export default function SectionPaperCard({ children, sx, onClick }: Props) {
       onClick={onClick}
       sx={{
         p: { xs: 2, sm: 2.5 },
-        bgcolor: "#fff",
-        borderRadius: "20px",
-        border: "1px solid #eae7e2",
+        bgcolor: '#fff',
+        borderRadius: '20px',
+        border: '1px solid #eae7e2',
         ...sx,
       }}
     >

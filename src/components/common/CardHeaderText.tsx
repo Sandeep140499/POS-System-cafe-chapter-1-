@@ -1,5 +1,5 @@
-import { Box, Stack, Typography } from "@mui/material";
-import type { ReactNode } from "react";
+import { Box, Stack, Typography } from '@mui/material';
+import type { ReactNode } from 'react';
 
 type Props = {
   title: string;
@@ -17,19 +17,26 @@ export default function CardHeaderText({ title, subtitle, sectionLabel, action }
         <Typography
           variant="overline"
           color="primary.main"
-          sx={{ display: "block", fontSize: "0.7rem", letterSpacing: "0.08em", lineHeight: 1, mb: 0.5, fontWeight: "700" }}
+          sx={{
+            display: 'block',
+            fontSize: '0.7rem',
+            letterSpacing: '0.08em',
+            lineHeight: 1,
+            mb: 0.5,
+            fontWeight: '700',
+          }}
         >
           {sectionLabel}
         </Typography>
       )}
-      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <Typography variant="h5" color="text.primary" sx={{ lineHeight: 1.3, fontWeight: "700" }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Typography variant="h5" color="text.primary" sx={{ lineHeight: 1.3, fontWeight: '700' }}>
           {title}
         </Typography>
         {action}
       </Box>
       {subtitle && (
-        <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5, fontWeight: "400" }}>
+        <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5, fontWeight: '400' }}>
           {subtitle}
         </Typography>
       )}

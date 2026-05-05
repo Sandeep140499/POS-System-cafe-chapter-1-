@@ -1,11 +1,11 @@
-import { Box, Stack } from "@mui/material";
-import DashboardHeader from "components/sections/dashboard/DashboardHeader";
-import PrimaryStatsSection from "components/sections/dashboard/PrimaryStatsSection";
-import SalesTargetWidget from "components/sections/dashboard/SalesTargetWidget";
-import OvertimeSection from "components/sections/dashboard/OvertimeSection";
-import ActiveShiftSection from "components/sections/dashboard/ActiveShiftSection";
-import SalesByEmployeeSection from "components/sections/dashboard/SalesByEmployeeSection";
-import TodayItemSalesSection from "components/sections/dashboard/TodayItemSalesSection";
+import { Box, Stack } from '@mui/material';
+import DashboardHeader from 'components/sections/dashboard/DashboardHeader';
+import PrimaryStatsSection from 'components/sections/dashboard/PrimaryStatsSection';
+import SalesTargetWidget from 'components/sections/dashboard/SalesTargetWidget';
+import OvertimeSection from 'components/sections/dashboard/OvertimeSection';
+import ActiveShiftSection from 'components/sections/dashboard/ActiveShiftSection';
+import SalesByEmployeeSection from 'components/sections/dashboard/SalesByEmployeeSection';
+import TodayItemSalesSection from 'components/sections/dashboard/TodayItemSalesSection';
 
 export default function Dashboard() {
   return (
@@ -21,8 +21,8 @@ export default function Dashboard() {
       {/* Sales Target (wider) + Overtime Running (narrower) */}
       <Box
         sx={{
-          display: "grid",
-          gridTemplateColumns: { xs: "1fr", lg: "2fr 1fr" },
+          display: 'grid',
+          gridTemplateColumns: { xs: '1fr', lg: '2fr 1fr' },
           gap: 3,
           mt: 3,
         }}
@@ -39,8 +39,8 @@ export default function Dashboard() {
       {/* Today's Item Sales + Sales by Employee - side by side */}
       <Box
         sx={{
-          display: "grid",
-          gridTemplateColumns: { xs: "1fr", lg: "1fr 1fr" },
+          display: 'grid',
+          gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' },
           gap: 3,
           mt: 3,
         }}

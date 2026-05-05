@@ -1,14 +1,14 @@
 /**
  * Services Index
- * 
+ *
  * Centralized exports for all API services.
  * Import from here: import { customerService } from '@/services';
  */
 
 // Configuration
-export { 
-  USE_MOCK_API, 
-  BASE_URL, 
+export {
+  USE_MOCK_API,
+  BASE_URL,
   ENDPOINTS,
   REQUEST_TIMEOUT,
   MOCK_DELAY_MS,
@@ -16,19 +16,13 @@ export {
 } from './api.config';
 
 // API Client
-export { 
-  api, 
-  apiRequest,
-} from './apiClient';
+export { api, apiRequest } from './apiClient';
 
 // API Client Types
-export type { 
-  ApiResponse, 
-  ApiError 
-} from './apiClient';
+export type { ApiResponse, ApiError } from './apiClient';
 
 // Customer Service
-export { 
+export {
   default as customerService,
   getCustomers,
   getCustomerById,
@@ -41,8 +35,4 @@ export {
 } from './customerService';
 
 // Types (must be exported separately for isolatedModules)
-export type { 
-  Customer,
-  CustomersResponse,
-  CustomerStats,
-} from './customerService';
+export type { Customer, CustomersResponse, CustomerStats } from './customerService';

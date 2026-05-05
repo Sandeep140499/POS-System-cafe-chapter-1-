@@ -1,12 +1,12 @@
-import type { PaletteOptions } from "@mui/material/styles";
-import { colors } from "./colors";
+import type { PaletteOptions } from '@mui/material/styles';
+import { colors } from './colors';
 
 export const palette: PaletteOptions = {
-  mode: "light",
+  mode: 'light',
   primary: {
-    light: "#d8845c",
-    main: "#c86030",
-    dark: "#a8502a",
+    light: '#d8845c',
+    main: '#c86030',
+    dark: '#a8502a',
   },
   secondary: {
     light: colors.secondary[3],
@@ -34,13 +34,13 @@ export const palette: PaletteOptions = {
     dark: colors.error[7],
   },
   background: {
-    default: "#f5f3ef",
-    paper: "#ffffff",
+    default: '#f5f3ef',
+    paper: '#ffffff',
   },
   text: {
-    primary: "#1c1c1c",
-    secondary: "#6b6b6b",
-    disabled: "#9EA0AB",
+    primary: '#1c1c1c',
+    secondary: '#6b6b6b',
+    disabled: '#9EA0AB',
   },
-  divider: "#eae7e2",
+  divider: '#eae7e2',
 };

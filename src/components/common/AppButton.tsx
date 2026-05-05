@@ -1,5 +1,5 @@
-import { Button, ButtonProps } from "@mui/material";
-import type React from "react";
+import { Button, ButtonProps } from '@mui/material';
+import type React from 'react';
 
 export type AppButtonProps = ButtonProps;
 
@@ -16,23 +16,11 @@ export function SecondaryButton(props: AppButtonProps) {
 }
 
 export function GhostButton(props: AppButtonProps) {
-  return (
-    <Button
-      variant="text"
-      sx={{ color: "text.secondary", ...props.sx }}
-      {...props}
-    />
-  );
+  return <Button variant="text" sx={{ color: 'text.secondary', ...props.sx }} {...props} />;
 }
 
 export function DangerButton(props: AppButtonProps) {
-  return (
-    <Button
-      variant="contained"
-      color="error"
-      {...props}
-    />
-  );
+  return <Button variant="contained" color="error" {...props} />;
 }
 
 export function SmallButton(props: AppButtonProps) {
@@ -53,10 +41,7 @@ export function IconButton({
   ...props
 }: AppButtonProps & { icon?: React.ReactNode }) {
   return (
-    <Button
-      startIcon={icon}
-      {...props}
-    >
+    <Button startIcon={icon} {...props}>
       {children}
     </Button>
   );
@@ -69,7 +54,7 @@ export function LoadingButton({
 }: AppButtonProps & { loading?: boolean }) {
   return (
     <Button disabled={loading || props.disabled} {...props}>
-      {loading ? "Loading..." : children}
+      {loading ? 'Loading...' : children}
     </Button>
   );
 }
@@ -97,12 +82,12 @@ export function LinkButton(props: AppButtonProps) {
     <Button
       variant="text"
       sx={{
-        color: "#7ed7d2",
-        textDecoration: "none",
+        color: '#7ed7d2',
+        textDecoration: 'none',
         fontWeight: 600,
         fontSize: 13,
         p: 0,
-        minWidth: "auto",
+        minWidth: 'auto',
         ...props.sx,
       }}
       {...props}
@@ -115,8 +100,8 @@ export function BackButton(props: AppButtonProps) {
     <Button
       variant="text"
       sx={{
-        textTransform: "none",
-        color: "#9fb0d6",
+        textTransform: 'none',
+        color: '#9fb0d6',
         fontSize: 13,
         ...props.sx,
       }}
@@ -143,11 +128,7 @@ export function SubmitButton(props: AppButtonProps) {
 }
 
 export function CreateButton(props: AppButtonProps) {
-  return (
-    <ActionButton {...props}>
-      + Create New
-    </ActionButton>
-  );
+  return <ActionButton {...props}>+ Create New</ActionButton>;
 }
 
 export function EditButton(props: AppButtonProps) {
@@ -156,45 +137,27 @@ export function EditButton(props: AppButtonProps) {
 
 export function DeleteButton(props: AppButtonProps) {
   return (
-    <SmallButton
-      sx={{ color: "error.main", ...props.sx }}
-      {...props}
-    >
+    <SmallButton sx={{ color: 'error.main', ...props.sx }} {...props}>
       Delete
     </SmallButton>
   );
 }
 
 export function SaveButton(props: AppButtonProps) {
-  return (
-    <PrimaryButton {...props}>
-      Save
-    </PrimaryButton>
-  );
+  return <PrimaryButton {...props}>Save</PrimaryButton>;
 }
 
 export function CancelButton(props: AppButtonProps) {
-  return (
-    <SecondaryButton {...props}>
-      Cancel
-    </SecondaryButton>
-  );
+  return <SecondaryButton {...props}>Cancel</SecondaryButton>;
 }
 
 export function SearchButton(props: AppButtonProps) {
-  return (
-    <PrimaryButton {...props}>
-      Search
-    </PrimaryButton>
-  );
+  return <PrimaryButton {...props}>Search</PrimaryButton>;
 }
 
 export function FilterButton(props: AppButtonProps) {
   return (
-    <SecondaryButton
-      sx={{ minWidth: 100, ...props.sx }}
-      {...props}
-    >
+    <SecondaryButton sx={{ minWidth: 100, ...props.sx }} {...props}>
       Filter
     </SecondaryButton>
   );
@@ -202,21 +165,14 @@ export function FilterButton(props: AppButtonProps) {
 
 export function ExportButton(props: AppButtonProps) {
   return (
-    <SecondaryButton
-      sx={{ minWidth: 100, ...props.sx }}
-      {...props}
-    >
+    <SecondaryButton sx={{ minWidth: 100, ...props.sx }} {...props}>
       Export
     </SecondaryButton>
   );
 }
 
 export function RefreshButton(props: AppButtonProps) {
-  return (
-    <SecondaryButton {...props}>
-      Refresh
-    </SecondaryButton>
-  );
+  return <SecondaryButton {...props}>Refresh</SecondaryButton>;
 }
 
 export function ViewButton(props: AppButtonProps) {
@@ -224,19 +180,11 @@ export function ViewButton(props: AppButtonProps) {
 }
 
 export function DownloadButton(props: AppButtonProps) {
-  return (
-    <PrimaryButton {...props}>
-      Download
-    </PrimaryButton>
-  );
+  return <PrimaryButton {...props}>Download</PrimaryButton>;
 }
 
 export function UploadButton(props: AppButtonProps) {
-  return (
-    <SecondaryButton {...props}>
-      Upload
-    </SecondaryButton>
-  );
+  return <SecondaryButton {...props}>Upload</SecondaryButton>;
 }
 
 export function LoginButton(props: AppButtonProps) {
@@ -253,7 +201,7 @@ export function LoginButton(props: AppButtonProps) {
 export function LogoutButton(props: AppButtonProps) {
   return (
     <SecondaryButton
-      sx={{ color: "common.white", borderColor: "rgba(255,255,255,0.3)", ...props.sx }}
+      sx={{ color: 'common.white', borderColor: 'rgba(255,255,255,0.3)', ...props.sx }}
       {...props}
     >
       Logout
@@ -263,10 +211,7 @@ export function LogoutButton(props: AppButtonProps) {
 
 export function RegisterButton(props: AppButtonProps) {
   return (
-    <PrimaryButton
-      sx={{ py: 0.85, fontSize: 18, mt: 0.6, ...props.sx }}
-      {...props}
-    >
+    <PrimaryButton sx={{ py: 0.85, fontSize: 18, mt: 0.6, ...props.sx }} {...props}>
       Create Account
     </PrimaryButton>
   );
@@ -276,7 +221,7 @@ export function ForgotPasswordButton(props: AppButtonProps) {
   return (
     <Button
       variant="text"
-      sx={{ textTransform: "none", color: "#9fb0d6", mt: -0.1, fontSize: 13, ...props.sx }}
+      sx={{ textTransform: 'none', color: '#9fb0d6', mt: -0.1, fontSize: 13, ...props.sx }}
       {...props}
     >
       Forgot Password?
@@ -285,36 +230,20 @@ export function ForgotPasswordButton(props: AppButtonProps) {
 }
 
 export function ResetPasswordButton(props: AppButtonProps) {
-  return (
-    <SubmitButton {...props}>
-      Update Password
-    </SubmitButton>
-  );
+  return <SubmitButton {...props}>Update Password</SubmitButton>;
 }
 
 export function SendResetLinkButton(props: AppButtonProps) {
-  return (
-    <SubmitButton {...props}>
-      Send Reset Link
-    </SubmitButton>
-  );
+  return <SubmitButton {...props}>Send Reset Link</SubmitButton>;
 }
 
 export function BackToLoginButton(props: AppButtonProps) {
-  return (
-    <BackButton {...props}>
-      Back to Login
-    </BackButton>
-  );
+  return <BackButton {...props}>Back to Login</BackButton>;
 }
 
 export function GetStartedButton(props: AppButtonProps) {
   return (
-    <PrimaryButton
-      size="large"
-      sx={{ px: 5, py: 1.5, fontSize: 18, ...props.sx }}
-      {...props}
-    >
+    <PrimaryButton size="large" sx={{ px: 5, py: 1.5, fontSize: 18, ...props.sx }} {...props}>
       Get Started
     </PrimaryButton>
   );

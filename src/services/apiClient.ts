@@ -1,16 +1,11 @@
 /**
  * API Client
- * 
+ *
  * A centralized HTTP client that handles all API requests.
  * Supports both mock data (JSON files) and real API endpoints.
  */
 
-import { 
-  USE_MOCK_API, 
-  BASE_URL, 
-  REQUEST_TIMEOUT, 
-  MOCK_DELAY_MS 
-} from './api.config';
+import { USE_MOCK_API, BASE_URL, REQUEST_TIMEOUT, MOCK_DELAY_MS } from './api.config';
 
 // API Response wrapper
 export interface ApiResponse<T> {
@@ -93,7 +88,7 @@ export async function apiRequest<T>(
     // MOCK API: Load from JSON files
     if (USE_MOCK_API) {
       await mockDelay();
-      
+
       // Handle DELETE operation in mock mode
       if (method === 'DELETE') {
         // In real implementation, this would modify localStorage or state
@@ -128,7 +123,7 @@ export async function apiRequest<T>(
     const timeoutId = setTimeout(() => controller.abort(), timeout);
 
     const url = `${BASE_URL}${endpoint}`;
-    
+
     const response = await fetch(url, {
       method,
       headers: {
@@ -155,19 +150,18 @@ export async function apiRequest<T>(
       data,
       status: response.status,
     };
-
   } catch (error) {
     if (error instanceof ApiError) {
       throw error;
     }
-    
+
     if (error instanceof Error) {
       if (error.name === 'AbortError') {
         throw new ApiError(408, 'Request timeout');
       }
       throw new ApiError(500, error.message);
     }
-    
+
     throw new ApiError(500, 'Unknown error occurred');
   }
 }

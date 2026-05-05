@@ -1,8 +1,8 @@
-import { Navigate, createBrowserRouter } from "react-router-dom";
-import MainLayout from "layouts/main-layout";
-import AuthLayout from "layouts/auth-layout";
-import ProtectedRoute from "components/auth/ProtectedRoute";
-import Landing from "pages/landing/Landing";
+import { Navigate, createBrowserRouter } from 'react-router-dom';
+import MainLayout from 'layouts/main-layout';
+import AuthLayout from 'layouts/auth-layout';
+import ProtectedRoute from 'components/auth/ProtectedRoute';
+import Landing from 'pages/landing/Landing';
 import {
   EmployeeDashboardPage,
   EmployeeLeaderboardPage,
@@ -18,7 +18,7 @@ import {
   PaidPendingPage,
   MyShiftPage,
   LeavePage,
-} from "pages/employee";
+} from 'pages/employee';
 import {
   SuperAdminDashboardPage,
   SuperAdminLeaderboardPage,
@@ -44,14 +44,14 @@ import {
   CertificatesPage,
   RevenuePage,
   SalarySlipsPage,
-} from "pages/super-admin";
-import LoginPage from "pages/auth/LoginPage";
-import RegisterPage from "pages/auth/RegisterPage";
-import ForgotPasswordPage from "pages/auth/ForgotPasswordPage";
-import ResetPasswordPage from "pages/auth/ResetPasswordPage";
-import PortalPage from "pages/auth/PortalPage";
-import PrivacyPolicyPage from "pages/landing/PrivacyPolicyPage";
-import { paths } from "./paths";
+} from 'pages/super-admin';
+import LoginPage from 'pages/auth/LoginPage';
+import RegisterPage from 'pages/auth/RegisterPage';
+import ForgotPasswordPage from 'pages/auth/ForgotPasswordPage';
+import ResetPasswordPage from 'pages/auth/ResetPasswordPage';
+import PortalPage from 'pages/auth/PortalPage';
+import PrivacyPolicyPage from 'pages/landing/PrivacyPolicyPage';
+import { paths } from './paths';
 
 export const router = createBrowserRouter(
   [
@@ -64,7 +64,7 @@ export const router = createBrowserRouter(
       element: <PrivacyPolicyPage />,
     },
     {
-      path: "/portal",
+      path: '/portal',
       element: <PortalPage />,
     },
     {
@@ -77,17 +77,17 @@ export const router = createBrowserRouter(
       children: [
         { index: true, element: <EmployeeDashboardPage /> },
         // Dashboard
-        { path: "dashboard", element: <EmployeeDashboardPage /> },
+        { path: 'dashboard', element: <EmployeeDashboardPage /> },
         // Orders
-        { path: "live-orders", element: <LiveOrdersPage /> },
-        { path: "add-order", element: <AddOrderPage /> },
-        { path: "all-orders", element: <EmployeeAllOrdersPage /> },
-        { path: "paid-pending", element: <PaidPendingPage /> },
+        { path: 'live-orders', element: <LiveOrdersPage /> },
+        { path: 'add-order', element: <AddOrderPage /> },
+        { path: 'all-orders', element: <EmployeeAllOrdersPage /> },
+        { path: 'paid-pending', element: <PaidPendingPage /> },
         // My Shift
-        { path: "my-shift", element: <MyShiftPage /> },
-        { path: "leave", element: <LeavePage /> },
+        { path: 'my-shift', element: <MyShiftPage /> },
+        { path: 'leave', element: <LeavePage /> },
         // Profile
-        { path: "profile", element: <EmployeeProfilePage /> },
+        { path: 'profile', element: <EmployeeProfilePage /> },
       ],
     },
     {
@@ -100,33 +100,33 @@ export const router = createBrowserRouter(
       children: [
         { index: true, element: <SuperAdminDashboardPage /> },
         // Dashboard
-        { path: "dashboard", element: <SuperAdminDashboardPage /> },
+        { path: 'dashboard', element: <SuperAdminDashboardPage /> },
         // Overview
-        { path: "performance", element: <PerformancePage /> },
-        { path: "operations", element: <OperationsPage /> },
+        { path: 'performance', element: <PerformancePage /> },
+        { path: 'operations', element: <OperationsPage /> },
         // Menu
-        { path: "menu", element: <MenuPage /> },
+        { path: 'menu', element: <MenuPage /> },
         // Orders
-        { path: "all-orders", element: <AllOrdersPage /> },
+        { path: 'all-orders', element: <AllOrdersPage /> },
         // Menu
-        { path: "happy-hour", element: <HappyHourOffersPage /> },
+        { path: 'happy-hour', element: <HappyHourOffersPage /> },
         // Leaderboard
-        { path: "customer-leaderboard", element: <CustomerLeaderboardPage /> },
+        { path: 'customer-leaderboard', element: <CustomerLeaderboardPage /> },
         // Management
-        { path: "removed-items", element: <RemovedItemsPage /> },
-        { path: "raised-requests", element: <RaisedRequestsPage /> },
+        { path: 'removed-items', element: <RemovedItemsPage /> },
+        { path: 'raised-requests', element: <RaisedRequestsPage /> },
         // Employees
-        { path: "employees", element: <EmployeesPage /> },
-        { path: "work-hours", element: <WorkHoursPage /> },
-        { path: "overtime", element: <OvertimePage /> },
-        { path: "late-entries", element: <LateEntriesPage /> },
-        { path: "leave-requests", element: <LeaveRequestsPage /> },
-        { path: "certificates", element: <CertificatesPage /> },
+        { path: 'employees', element: <EmployeesPage /> },
+        { path: 'work-hours', element: <WorkHoursPage /> },
+        { path: 'overtime', element: <OvertimePage /> },
+        { path: 'late-entries', element: <LateEntriesPage /> },
+        { path: 'leave-requests', element: <LeaveRequestsPage /> },
+        { path: 'certificates', element: <CertificatesPage /> },
         // Revenue
-        { path: "revenue", element: <RevenuePage /> },
-        { path: "salary-slips", element: <SalarySlipsPage /> },
+        { path: 'revenue', element: <RevenuePage /> },
+        { path: 'salary-slips', element: <SalarySlipsPage /> },
         // System
-        { path: "settings", element: <SuperAdminSettingsPage /> },
+        { path: 'settings', element: <SuperAdminSettingsPage /> },
       ],
     },
     {
@@ -134,16 +134,16 @@ export const router = createBrowserRouter(
       element: <AuthLayout />,
       children: [
         { index: true, element: <LoginPage /> },
-        { path: "login", element: <LoginPage /> },
-        { path: "register", element: <RegisterPage /> },
-        { path: "forgot-password", element: <ForgotPasswordPage /> },
-        { path: "reset-password", element: <ResetPasswordPage /> },
+        { path: 'login', element: <LoginPage /> },
+        { path: 'register', element: <RegisterPage /> },
+        { path: 'forgot-password', element: <ForgotPasswordPage /> },
+        { path: 'reset-password', element: <ResetPasswordPage /> },
       ],
     },
     {
-      path: "*",
+      path: '*',
       element: <Navigate to={paths.landing} replace />,
     },
   ],
-  { basename: "/" },
+  { basename: '/' }
 );

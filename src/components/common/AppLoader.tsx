@@ -1,23 +1,19 @@
-import { Box, CircularProgress, LinearProgress, Skeleton, Typography } from "@mui/material";
-import type React from "react";
+import { Box, CircularProgress, LinearProgress, Skeleton, Typography } from '@mui/material';
+import type React from 'react';
 
 export type LoaderProps = {
-  size?: number | "small" | "medium" | "large";
-  color?: "primary" | "secondary" | "error" | "info" | "success" | "warning" | "inherit";
+  size?: number | 'small' | 'medium' | 'large';
+  color?: 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning' | 'inherit';
   thickness?: number;
 };
 
-export default function AppLoader({
-  size = 40,
-  color = "primary",
-  thickness = 3.6,
-}: LoaderProps) {
+export default function AppLoader({ size = 40, color = 'primary', thickness = 3.6 }: LoaderProps) {
   return (
     <Box
       sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         p: 2,
       }}
     >
@@ -30,11 +26,11 @@ export function FullPageLoader({ message }: { message?: string }) {
   return (
     <Box
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "100vh",
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '100vh',
         gap: 2,
       }}
     >
@@ -53,8 +49,8 @@ export function InlineLoader({ size = 20 }: { size?: number }) {
     <Box
       component="span"
       sx={{
-        display: "inline-flex",
-        alignItems: "center",
+        display: 'inline-flex',
+        alignItems: 'center',
         ml: 1,
       }}
     >
@@ -68,8 +64,8 @@ export function ButtonLoader() {
     <Box
       component="span"
       sx={{
-        display: "inline-flex",
-        alignItems: "center",
+        display: 'inline-flex',
+        alignItems: 'center',
       }}
     >
       <CircularProgress size={16} color="inherit" thickness={2} />
@@ -78,12 +74,12 @@ export function ButtonLoader() {
 }
 
 export function LinearLoader({
-  color = "primary",
+  color = 'primary',
 }: {
-  color?: "primary" | "secondary" | "error" | "info" | "success" | "warning" | "inherit";
+  color?: 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning' | 'inherit';
 }) {
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: '100%' }}>
       <LinearProgress color={color} />
     </Box>
   );
@@ -93,12 +89,7 @@ export function TableLoader({ rows = 5 }: { rows?: number }) {
   return (
     <Box sx={{ p: 2 }}>
       {Array.from({ length: rows }).map((_, i) => (
-        <Skeleton
-          key={i}
-          variant="rectangular"
-          height={40}
-          sx={{ mb: 1, borderRadius: 1 }}
-        />
+        <Skeleton key={i} variant="rectangular" height={40} sx={{ mb: 1, borderRadius: 1 }} />
       ))}
     </Box>
   );
@@ -125,18 +116,12 @@ export function ContentLoader() {
 }
 
 export function SkeletonAvatar({ size = 40 }: { size?: number }) {
-  return (
-    <Skeleton
-      variant="circular"
-      width={size}
-      height={size}
-    />
-  );
+  return <Skeleton variant="circular" width={size} height={size} />;
 }
 
 export function SkeletonText({
   lines = 1,
-  width = "100%",
+  width = '100%',
 }: {
   lines?: number;
   width?: string | number;
@@ -144,12 +129,7 @@ export function SkeletonText({
   return (
     <>
       {Array.from({ length: lines }).map((_, i) => (
-        <Skeleton
-          key={i}
-          variant="text"
-          width={width}
-          sx={{ mb: i < lines - 1 ? 0.5 : 0 }}
-        />
+        <Skeleton key={i} variant="text" width={width} sx={{ mb: i < lines - 1 ? 0.5 : 0 }} />
       ))}
     </>
   );

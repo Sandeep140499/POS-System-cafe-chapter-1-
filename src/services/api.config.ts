@@ -1,13 +1,13 @@
 /**
  * API Configuration
- * 
+ *
  * This file controls whether the app uses MOCK data or REAL API endpoints.
- * 
+ *
  * When you're ready to switch to real APIs:
  * 1. Set USE_MOCK_API = false
  * 2. Update BASE_URL to your real API base URL
  * 3. Remove the mock delay in apiClient.ts
- * 
+ *
  * The service layer will automatically use the real endpoints.
  */
 
@@ -15,9 +15,9 @@
 export const USE_MOCK_API = true;
 
 // Base URL for real API (update this when switching to production)
-export const BASE_URL = USE_MOCK_API 
-  ? '/src/data/json'  // Mock data path (relative to public or import path)
-  : 'https://api.yourdomain.com/v1';  // Replace with your real API base URL
+export const BASE_URL = USE_MOCK_API
+  ? '/src/data/json' // Mock data path (relative to public or import path)
+  : 'https://api.yourdomain.com/v1'; // Replace with your real API base URL
 
 // API endpoints configuration
 export const ENDPOINTS = {

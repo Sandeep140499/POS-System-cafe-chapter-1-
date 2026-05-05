@@ -1,5 +1,5 @@
-import { Paper, PaperProps, Stack, Typography, Box } from "@mui/material";
-import type React from "react";
+import { Paper, PaperProps, Stack, Typography, Box } from '@mui/material';
+import type React from 'react';
 
 export type AppCardProps = PaperProps & {
   title?: string;
@@ -25,10 +25,10 @@ export default function AppCard({
     <Paper
       elevation={0}
       sx={{
-        bgcolor: "background.paper",
+        bgcolor: 'background.paper',
         borderRadius: 3,
-        border: "1px solid rgba(255,255,255,0.04)",
-        overflow: "hidden",
+        border: '1px solid rgba(255,255,255,0.04)',
+        overflow: 'hidden',
         ...sx,
       }}
       {...props}
@@ -37,22 +37,22 @@ export default function AppCard({
         <Stack
           direction="row"
           sx={{
-            alignItems: "center",
-            justifyContent: "space-between",
+            alignItems: 'center',
+            justifyContent: 'space-between',
             px: noPadding ? 0 : 3,
             py: noPadding ? 0 : 2,
-            borderBottom: "1px solid rgba(255,255,255,0.04)",
+            borderBottom: '1px solid rgba(255,255,255,0.04)',
             ...headerSx,
           }}
         >
           <Box>
             {title && (
-              <Typography variant="h6" sx={{ fontWeight: 600, fontSize: "1.1rem" }}>
+              <Typography variant="h6" sx={{ fontWeight: 600, fontSize: '1.1rem' }}>
                 {title}
               </Typography>
             )}
             {subtitle && (
-              <Typography variant="body2" sx={{ color: "text.secondary", mt: 0.5 }}>
+              <Typography variant="body2" sx={{ color: 'text.secondary', mt: 0.5 }}>
                 {subtitle}
               </Typography>
             )}
@@ -60,9 +60,7 @@ export default function AppCard({
           {action && <Box>{action}</Box>}
         </Stack>
       )}
-      <Box sx={{ px: noPadding ? 0 : 3, py: noPadding ? 0 : 2, ...contentSx }}>
-        {children}
-      </Box>
+      <Box sx={{ px: noPadding ? 0 : 3, py: noPadding ? 0 : 2, ...contentSx }}>{children}</Box>
     </Paper>
   );
 }
@@ -73,12 +71,12 @@ export function AuthCard({ children, sx, ...props }: PaperProps) {
       elevation={0}
       sx={{
         p: { xs: 2, md: 3 },
-        width: "100%",
+        width: '100%',
         maxWidth: 420,
-        mx: "auto",
-        bgcolor: "#1b1f36",
+        mx: 'auto',
+        bgcolor: '#1b1f36',
         borderRadius: 2,
-        border: "1px solid rgba(255,255,255,0.04)",
+        border: '1px solid rgba(255,255,255,0.04)',
         ...sx,
       }}
       {...props}
@@ -88,16 +86,12 @@ export function AuthCard({ children, sx, ...props }: PaperProps) {
   );
 }
 
-export function DashboardCard({
-  children,
-  sx,
-  ...props
-}: PaperProps) {
+export function DashboardCard({ children, sx, ...props }: PaperProps) {
   return (
     <Paper
       elevation={0}
       sx={{
-        bgcolor: "#21222D",
+        bgcolor: '#21222D',
         borderRadius: 3,
         p: 3,
         ...sx,
@@ -128,27 +122,27 @@ export function StatCard({
     <Paper
       elevation={0}
       sx={{
-        bgcolor: "#21222D",
+        bgcolor: '#21222D',
         borderRadius: 3,
         p: 2.5,
         ...sx,
       }}
     >
       <Stack spacing={1}>
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
           {title}
         </Typography>
-        <Typography variant="h4" sx={{ fontWeight: 700, fontSize: "1.75rem" }}>
+        <Typography variant="h4" sx={{ fontWeight: 700, fontSize: '1.75rem' }}>
           {value}
         </Typography>
         {trend && (
           <Typography
             variant="body2"
             sx={{
-              color: trendUp ? "success.main" : "error.main",
+              color: trendUp ? 'success.main' : 'error.main',
             }}
           >
-            {trendUp ? "↑" : "↓"} {trend}
+            {trendUp ? '↑' : '↓'} {trend}
           </Typography>
         )}
       </Stack>
@@ -171,7 +165,7 @@ export function InfoCard({
     <Paper
       elevation={0}
       sx={{
-        bgcolor: "background.paper",
+        bgcolor: 'background.paper',
         borderRadius: 3,
         p: 3,
         ...sx,
@@ -190,18 +184,14 @@ export function InfoCard({
   );
 }
 
-export function ListCard({
-  children,
-  sx,
-  ...props
-}: PaperProps) {
+export function ListCard({ children, sx, ...props }: PaperProps) {
   return (
     <Paper
       elevation={0}
       sx={{
-        bgcolor: "background.paper",
+        bgcolor: 'background.paper',
         borderRadius: 3,
-        overflow: "hidden",
+        overflow: 'hidden',
         ...sx,
       }}
       {...props}

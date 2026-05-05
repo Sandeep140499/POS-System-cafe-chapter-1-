@@ -1,6 +1,6 @@
 /**
  * Customer Service
- * 
+ *
  * Handles all customer-related API operations.
  * Works with both mock data (JSON files) and real API endpoints.
  */
@@ -66,14 +66,9 @@ export async function getCustomerById(id: number): Promise<Customer | null> {
  * Create new customer
  * POST /customers
  */
-export async function createCustomer(
-  customerData: Omit<Customer, 'id'>
-): Promise<Customer> {
+export async function createCustomer(customerData: Omit<Customer, 'id'>): Promise<Customer> {
   try {
-    const response = await api.post<Customer>(
-      ENDPOINTS.customers.create,
-      customerData
-    );
+    const response = await api.post<Customer>(ENDPOINTS.customers.create, customerData);
     return response.data;
   } catch (error) {
     console.error('Failed to create customer:', error);
@@ -90,10 +85,7 @@ export async function updateCustomer(
   customerData: Partial<Customer>
 ): Promise<Customer> {
   try {
-    const response = await api.put<Customer>(
-      ENDPOINTS.customers.update(id),
-      customerData
-    );
+    const response = await api.put<Customer>(ENDPOINTS.customers.update(id), customerData);
     return response.data;
   } catch (error) {
     console.error(`Failed to update customer ${id}:`, error);
@@ -131,10 +123,7 @@ export function calculateCustomerStats(customers: Customer[]): CustomerStats {
  * Returns name and mobile only (as per your requirement)
  */
 export function exportCustomersToCSV(customers: Customer[]): string {
-  const rows = [
-    'Name,Mobile',
-    ...customers.map(c => `${c.name},${c.mobile}`),
-  ];
+  const rows = ['Name,Mobile', ...customers.map(c => `${c.name},${c.mobile}`)];
   return rows.join('\n');
 }
 
@@ -145,7 +134,7 @@ export function downloadCustomersCSV(customers: Customer[], filename = 'customer
   const csvContent = exportCustomersToCSV(customers);
   const blob = new Blob([csvContent], { type: 'text/csv' });
   const url = URL.createObjectURL(blob);
-  
+
   const a = document.createElement('a');
   a.href = url;
   a.download = filename;

@@ -8,7 +8,7 @@ import {
   Typography,
   Box,
   Button,
-} from "@mui/material";
+} from '@mui/material';
 
 export type AppPaginationProps = PaginationProps & {
   totalPages?: number;
@@ -23,7 +23,7 @@ export default function AppPagination({
   ...props
 }: AppPaginationProps) {
   return (
-    <Stack direction="row" sx={{ justifyContent: "center", mt: 2 }}>
+    <Stack direction="row" sx={{ justifyContent: 'center', mt: 2 }}>
       <Pagination
         page={page}
         onChange={(_, value) => onPageChange(value)}
@@ -31,13 +31,13 @@ export default function AppPagination({
         shape="rounded"
         color="primary"
         sx={{
-          "& .MuiPaginationItem-root": {
-            color: "text.secondary",
-            borderColor: "rgba(255,255,255,0.1)",
+          '& .MuiPaginationItem-root': {
+            color: 'text.secondary',
+            borderColor: 'rgba(255,255,255,0.1)',
           },
-          "& .Mui-selected": {
-            bgcolor: "primary.main",
-            color: "#1c223b",
+          '& .Mui-selected': {
+            bgcolor: 'primary.main',
+            color: '#1c223b',
             fontWeight: 600,
           },
         }}
@@ -59,9 +59,9 @@ export function SimplePagination({
   return (
     <Box
       sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         gap: 1.5,
         mt: 2,
       }}
@@ -70,35 +70,35 @@ export function SimplePagination({
         disabled={page <= 1}
         onClick={() => onPageChange(page - 1)}
         sx={{
-          borderRadius: "20px",
-          textTransform: "none",
-          fontFamily: "Inter, sans-serif",
-          color: "#1a1a1a",
-          border: "1px solid #eae7e2",
-          bgcolor: "#fff",
+          borderRadius: '20px',
+          textTransform: 'none',
+          fontFamily: 'Inter, sans-serif',
+          color: '#1a1a1a',
+          border: '1px solid #eae7e2',
+          bgcolor: '#fff',
           minWidth: 90,
           height: 36,
-          "&:disabled": { color: "#bbb", borderColor: "#eae7e2" },
+          '&:disabled': { color: '#bbb', borderColor: '#eae7e2' },
         }}
       >
         Previous
       </Button>
-      <Typography sx={{ fontSize: 13.5, fontFamily: "Inter, sans-serif", color: "#555" }}>
+      <Typography sx={{ fontSize: 13.5, fontFamily: 'Inter, sans-serif', color: '#555' }}>
         Page {page} of {totalPages}
       </Typography>
       <Button
         disabled={page >= totalPages}
         onClick={() => onPageChange(page + 1)}
         sx={{
-          borderRadius: "20px",
-          textTransform: "none",
-          fontFamily: "Inter, sans-serif",
-          color: "#1a1a1a",
-          border: "1px solid #eae7e2",
-          bgcolor: "#fff",
+          borderRadius: '20px',
+          textTransform: 'none',
+          fontFamily: 'Inter, sans-serif',
+          color: '#1a1a1a',
+          border: '1px solid #eae7e2',
+          bgcolor: '#fff',
           minWidth: 90,
           height: 36,
-          "&:disabled": { color: "#bbb", borderColor: "#eae7e2" },
+          '&:disabled': { color: '#bbb', borderColor: '#eae7e2' },
         }}
       >
         Next
@@ -112,13 +112,13 @@ export function DataTablePagination(props: TablePaginationProps) {
     <TablePagination
       component="div"
       sx={{
-        color: "text.secondary",
-        borderTop: "1px solid rgba(255,255,255,0.04)",
-        "& .MuiTablePagination-select": {
-          color: "text.primary",
+        color: 'text.secondary',
+        borderTop: '1px solid rgba(255,255,255,0.04)',
+        '& .MuiTablePagination-select': {
+          color: 'text.primary',
         },
-        "& .MuiTablePagination-selectIcon": {
-          color: "text.secondary",
+        '& .MuiTablePagination-selectIcon': {
+          color: 'text.secondary',
         },
       }}
       {...props}
@@ -139,7 +139,7 @@ export function PaginationInfo({
   const end = Math.min(page * pageSize, total);
 
   return (
-    <Typography variant="body2" sx={{ color: "text.secondary" }}>
+    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
       Showing {start}–{end} of {total} results
     </Typography>
   );
@@ -161,20 +161,20 @@ export function PaginationContainer({
   return (
     <Box
       sx={{
-        display: "flex",
-        flexDirection: { xs: "column", sm: "row" },
-        alignItems: "center",
-        justifyContent: "space-between",
+        display: 'flex',
+        flexDirection: { xs: 'column', sm: 'row' },
+        alignItems: 'center',
+        justifyContent: 'space-between',
         gap: 2,
         mt: 3,
         pt: 2,
-        borderTop: "1px solid rgba(255,255,255,0.04)",
+        borderTop: '1px solid rgba(255,255,255,0.04)',
       }}
     >
       {showInfo && page !== undefined && pageSize !== undefined && total !== undefined && (
         <PaginationInfo page={page} pageSize={pageSize} total={total} />
       )}
-      <Box sx={{ ml: "auto" }}>{children}</Box>
+      <Box sx={{ ml: 'auto' }}>{children}</Box>
     </Box>
   );
 }

@@ -25,6 +25,7 @@ data/json/
 Data flows: **JSON File** → `apiClient.ts` (import) → `customerService.ts` → **Component**
 
 The `USE_MOCK_API = true` flag in `api.config.ts` enables mock mode:
+
 - Data is loaded from JSON files in `data/json/`
 - Simulated network delay (400ms)
 - No actual HTTP requests
@@ -34,6 +35,7 @@ The `USE_MOCK_API = true` flag in `api.config.ts` enables mock mode:
 To switch to real APIs:
 
 1. **Update configuration** in `api.config.ts`:
+
    ```typescript
    export const USE_MOCK_API = false;
    export const BASE_URL = 'https://api.yourdomain.com/v1';
@@ -59,11 +61,14 @@ downloadCustomersCSV(customers, 'customers.csv');
 ## Adding New Services
 
 1. Create a new service file (e.g., `orderService.ts`):
+
    ```typescript
    import { api, ENDPOINTS } from './api.config';
-   
-   export interface Order { /* ... */ }
-   
+
+   export interface Order {
+     /* ... */
+   }
+
    export async function getOrders(): Promise<Order[]> {
      const response = await api.get<{ orders: Order[] }>(ENDPOINTS.orders.list);
      return response.data.orders;
@@ -71,6 +76,7 @@ downloadCustomersCSV(customers, 'customers.csv');
    ```
 
 2. Export from `index.ts`:
+
    ```typescript
    export { getOrders, type Order } from './orderService';
    ```
@@ -85,13 +91,13 @@ downloadCustomersCSV(customers, 'customers.csv');
 
 ## Configuration Options
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `USE_MOCK_API` | `true` | Toggle mock/real API |
-| `BASE_URL` | `/src/data/json` | API base URL |
-| `REQUEST_TIMEOUT` | `10000` | Request timeout (ms) |
-| `MOCK_DELAY_MS` | `400` | Simulated network delay |
-| `DEFAULT_PAGE_SIZE` | `10` | Default pagination size |
+| Variable            | Default          | Description             |
+| ------------------- | ---------------- | ----------------------- |
+| `USE_MOCK_API`      | `true`           | Toggle mock/real API    |
+| `BASE_URL`          | `/src/data/json` | API base URL            |
+| `REQUEST_TIMEOUT`   | `10000`          | Request timeout (ms)    |
+| `MOCK_DELAY_MS`     | `400`            | Simulated network delay |
+| `DEFAULT_PAGE_SIZE` | `10`             | Default pagination size |
 
 ## Migration Guide: Mock → Real API
 

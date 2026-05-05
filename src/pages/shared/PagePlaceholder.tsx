@@ -1,5 +1,5 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
+import { Box, Button, Stack, Typography } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 
 type PagePlaceholderProps = {
   title: string;
@@ -17,9 +17,9 @@ export default function PagePlaceholder({
   return (
     <Box
       sx={{
-        minHeight: "calc(100vh - 120px)",
-        display: "grid",
-        placeItems: "center",
+        minHeight: 'calc(100vh - 120px)',
+        display: 'grid',
+        placeItems: 'center',
         px: 2,
       }}
     >
@@ -35,7 +35,7 @@ export default function PagePlaceholder({
             component={RouterLink}
             to={actionTo}
             variant="contained"
-            sx={{ width: "fit-content" }}
+            sx={{ width: 'fit-content' }}
           >
             {actionLabel}
           </Button>

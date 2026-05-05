@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-@import "simplebar-react/dist/simplebar.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import 'simplebar-react/dist/simplebar.min.css';
 
 *,
 *::before,
@@ -52,7 +52,13 @@ body,
   margin: 0;
   width: 100%;
   min-height: 100vh;
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif;
   line-height: 1.6;
 }
 
