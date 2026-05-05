@@ -1,0 +1,23 @@
+{
+  "orders": [
+    { "id": "ORD-2119", "customer": "Aarav Mehta", "phone": "98XXX12345", "items": 3, "txn": "TXN84034", "time": "02:15 pm", "date": "2025-04-30", "status": "PAID", "totalRaw": 690 },
+    { "id": "ORD-2118", "customer": "Priya Singh", "phone": "98XXX22341", "items": 2, "txn": "TXN84033", "time": "01:48 pm", "date": "2025-04-30", "status": "PENDING", "totalRaw": 410 },
+    { "id": "ORD-2117", "customer": "Rohan Khanna", "phone": "98XXX98712", "items": 1, "txn": "TXN84032", "time": "01:22 pm", "date": "2025-04-30", "status": "PAID", "totalRaw": 180 },
+    { "id": "ORD-2116", "customer": "Ananya Rao", "phone": "98XXX55501", "items": 4, "txn": "TXN84031", "time": "12:55 pm", "date": "2025-04-30", "status": "PAID", "totalRaw": 924 },
+    { "id": "ORD-2115", "customer": "Karan Patel", "phone": "98XXX44120", "items": 2, "txn": "TXN84030", "time": "12:10 pm", "date": "2025-04-30", "status": "PENDING", "totalRaw": 380 },
+    { "id": "ORD-2114", "customer": "Neha Gupta", "phone": "98XXX11223", "items": 3, "txn": "TXN84029", "time": "11:42 am", "date": "2025-04-30", "status": "PAID", "totalRaw": 520 },
+    { "id": "ORD-2113", "customer": "Vikram Rao", "phone": "98XXX33445", "items": 5, "txn": "TXN84028", "time": "11:05 am", "date": "2025-04-30", "status": "PAID", "totalRaw": 1150 },
+    { "id": "ORD-2112", "customer": "Sneha Verma", "phone": "98XXX55667", "items": 2, "txn": "TXN84027", "time": "10:38 am", "date": "2025-04-30", "status": "PENDING", "totalRaw": 290 },
+    { "id": "ORD-2111", "customer": "Ravi Kumar", "phone": "98XXX77889", "items": 1, "txn": "TXN84026", "time": "10:15 am", "date": "2025-04-30", "status": "PAID", "totalRaw": 150 },
+    { "id": "ORD-2110", "customer": "Pooja Sharma", "phone": "98XXX99001", "items": 4, "txn": "TXN84025", "time": "09:50 am", "date": "2025-04-30", "status": "PAID", "totalRaw": 780 },
+    { "id": "ORD-2109", "customer": "Amit Joshi", "phone": "98XXX22334", "items": 2, "txn": "TXN84024", "time": "09:20 am", "date": "2025-04-30", "status": "REJECT", "totalRaw": 340 },
+    { "id": "ORD-2108", "customer": "Divya Nair", "phone": "98XXX44556", "items": 3, "txn": "TXN84023", "time": "08:55 am", "date": "2025-04-30", "status": "PAID", "totalRaw": 610 },
+    { "id": "ORD-2107", "customer": "Suresh Gupta", "phone": "98XXX66778", "items": 1, "txn": "TXN84022", "time": "08:30 am", "date": "2025-04-30", "status": "PAID", "totalRaw": 120 },
+    { "id": "ORD-2106", "customer": "Meena Das", "phone": "98XXX88990", "items": 2, "txn": "TXN84021", "time": "08:05 am", "date": "2025-04-30", "status": "PENDING", "totalRaw": 260 },
+    { "id": "ORD-2105", "customer": "Rajesh Iyer", "phone": "98XXX00112", "items": 6, "txn": "TXN84020", "time": "07:40 am", "date": "2025-04-30", "status": "PAID", "totalRaw": 1420 }
+  ],
+  "meta": {
+    "total": 15,
+    "lastUpdated": "2025-05-04T10:00:00Z"
+  }
+}

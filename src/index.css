@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import "simplebar-react/dist/simplebar.min.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Base font sizes by device */
+  /* Mobile (< 768px): 14px */
+  font-size: 14px;
+}
+
+/* Tablet (768px - 991px): 15px */
+@media (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Desktop/Laptop (≥992px): 16px */
+@media (min-width: 992px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Large Desktop (≥1200px): 16-18px */
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1400px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Fluid typography using CSS clamp for headings */
+/* h1: clamp(1.75rem, 4vw + 1rem, 3rem) */
+/* h2: clamp(1.5rem, 3vw + 1rem, 2.5rem) */
+/* h3: clamp(1.25rem, 2vw + 1rem, 2rem) */
+/* h4: clamp(1.125rem, 1.5vw + 1rem, 1.75rem) */
+/* h5: clamp(1rem, 1vw + 1rem, 1.5rem) */
+/* h6: clamp(0.875rem, 0.5vw + 1rem, 1.25rem) */

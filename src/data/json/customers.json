@@ -1,0 +1,20 @@
+{
+  "customers": [
+    { "id": 1, "name": "Aarav Mehta", "mobile": "98XXX12345", "orders": 34, "spent": 12480 },
+    { "id": 2, "name": "Priya Singh", "mobile": "98XXX22341", "orders": 28, "spent": 9640 },
+    { "id": 3, "name": "Rohan Khanna", "mobile": "98XXX98712", "orders": 22, "spent": 7920 },
+    { "id": 4, "name": "Ananya Rao", "mobile": "98XXX55501", "orders": 19, "spent": 6800 },
+    { "id": 5, "name": "Karan Patel", "mobile": "98XXX44120", "orders": 17, "spent": 5960 },
+    { "id": 6, "name": "Sneha Verma", "mobile": "98XXX33891", "orders": 15, "spent": 5120 },
+    { "id": 7, "name": "Ravi Kumar", "mobile": "98XXX77210", "orders": 12, "spent": 4380 },
+    { "id": 8, "name": "Pooja Sharma", "mobile": "98XXX66540", "orders": 10, "spent": 3640 },
+    { "id": 9, "name": "Amit Joshi", "mobile": "98XXX11230", "orders": 8, "spent": 2880 },
+    { "id": 10, "name": "Divya Nair", "mobile": "98XXX99870", "orders": 6, "spent": 2160 },
+    { "id": 11, "name": "Suresh Gupta", "mobile": "98XXX55670", "orders": 5, "spent": 1800 },
+    { "id": 12, "name": "Meena Das", "mobile": "98XXX44320", "orders": 4, "spent": 1440 }
+  ],
+  "meta": {
+    "total": 12,
+    "lastUpdated": "2025-05-04T10:00:00Z"
+  }
+}
